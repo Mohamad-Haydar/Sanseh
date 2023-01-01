@@ -1,0 +1,51 @@
+CREATE TABLE products(
+    id INT NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    category varchar NOT NULL,
+    description TEXT NOT NULL,
+    image TEXT NOT NULL,
+    price TEXT NOT NULL,
+    review TEXT NOT NULL
+);
+
+
+INSERT INTO products (id, category, description, image, price, review, title) 
+VALUES (); 
+
+
+                            <div class=" mt-5 testemonial">
+    <h1 class="mb-2 text-center">What People Say About Us</h1>
+    <p class="mb-5 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper congue eros</p>
+    <div class="scroller">
+        <div class="menu">
+            <div class="menu--wrapper">
+                <?php foreach ($names as $index => $name) : ?>
+                    <div class="menu--item">
+                        <figure>
+                            <div class="testimonial-box">
+                                <div class="breif-detail">
+                                    <h5 class="testimonial-title">Comfortable and met all my expectations! I ordered a medium and it fit perfectly</h5>
+                                    <p class="testimonial-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus, auctor pretium ac ultrices. Dui lacus dignissim tincidunt urna, at enim tempo. Pellentesque amet Lorem ipsum dolor sit amet, </p>
+                                </div>
+                                <div class="person">
+                                    <img src="images/Image<?= $index + 1 ?>.png" alt="best seller img" />
+                                    <p class="person-name"><?= $name ?></p>
+                                    <p class="person-detail">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </figure>
+                        <br>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+style=" <?php if (!$setting) {
+                                        echo "transform: 'translateX(100%)'";
+                                    } else {
+                                        echo "transform: 'translateX(0%)'";
+                                    } ?>"

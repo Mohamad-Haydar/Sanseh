@@ -1,0 +1,33 @@
+@mixin show-hide-loading {
+    @keyframes show-hide-loading {
+        0%   {opacity: 1;}
+        50%  {opacity: .5;}
+        100% {opacity: 1;}
+    }
+}
+
+@mixin from-left {
+    @keyframes from-left{
+        from{
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin from-bottom {
+    @keyframes from-bottom{
+        from{
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}

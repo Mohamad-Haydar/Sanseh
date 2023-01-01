@@ -1,0 +1,53 @@
+@use '../helpers/variables' as *;
+
+.instagram-images{
+    width: 200px;
+}
+.instagramm{
+    position: relative;
+    .insta-link{
+        position: absolute;
+        bottom: 0;
+        background-color: $white;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: .5rem 2rem;
+    }
+    .slick-slider{
+        .best-sel-box{
+            margin: 0px 15px;
+            background-color: #fff;
+            img{
+                width: 100%;
+            }
+            .breif-detail{
+                padding: 10px;
+                p{
+                    margin-bottom: 10px;
+                    i{
+                        color: yellow;
+                    }
+                }
+            }
+        }
+        .slick-next{
+            right: 0;
+        }
+        .slick-prev{
+            left: 0;
+        }
+        .slick-arrow {
+            z-index: 3;
+            padding: 20px 10px;
+            width: fit-content;
+            height: fit-content;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+
+}

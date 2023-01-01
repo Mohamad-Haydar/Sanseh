@@ -1,0 +1,22 @@
+// helpers
+@use "./sass/helpers/variables" as *;
+@use "./sass/helpers/mixins" as *;
+
+// pages
+@use "./sass/pages/globalpage";
+@use './sass/pages/settingpage';
+@use "./sass/pages/homepage";
+@use "./sass/pages/login";
+@use "./sass/pages/_details";
+@use "./sass/pages/_cart";
+
+// components
+@use "./sass/components/buttons";
+@use "./sass/components/animation";
+@use './sass/components/folow-instagramm';
+@use './sass/components/register-form';
+
+// layout
+@use "./sass/layout/navbar";
+@use "./sass/layout/footer";
+@use './sass/layout/grid';

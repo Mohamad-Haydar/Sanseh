@@ -1,0 +1,183 @@
+@use '../helpers/variables' as *;
+@use '../components/buttons' as *;
+
+.signup-btn{
+    @include full-yellow-btn;
+}
+.login-btn{
+    @include dark-empty-btn;
+}
+
+.yello-bar{
+    background-color: $DarkYellow;
+    display: flex;
+    color: $white;
+    padding: 13px 0;
+    position: relative;
+    h4{
+        margin: auto;
+        line-height: 1;
+    }
+    .help{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        // line-height: 2;
+        .p-help{
+            position: relative;
+            margin-right: 20px;
+            &::before{
+                position: absolute;
+                content: "";
+                right: -8px;
+                height: 100%;
+                width: 2px;
+                background-color: $white;
+            }
+        }
+        .change-lg{
+            display: flex;
+            img{
+                width: 30px;
+                height: 20px;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+.nav-bar{
+    background: $LightBrown;
+    padding: 20px 0;
+    border-bottom: 1px solid $DarkYellow;
+    z-index: 2;
+    // box-shadow: 0 4px 30px $LightBrown;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom: 1px solid $DarkYellow;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        .nav-items{
+            ul{
+                display: flex;
+                gap: 30px;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                a{
+                    font-size: 16px;
+                    transition: 300ms;
+                    &:hover{
+                        color: $DarkYellow;
+                    }
+                }
+            }
+        }
+        .setting-btn{
+            display: flex;
+            gap: 10px;
+            position: relative;
+            .drop-down{
+                display: flex;
+                align-items: center;
+                .cart{
+                    position: relative;
+                    .red-number-cart{
+                        position: absolute;
+                        top: -5px;
+                        right: 5px;
+                        width: 15px;
+                        height: 15px;
+                        font-size: 10px;
+                        font-weight: 600;
+                        line-height: 1;
+                        background-color: red;
+                        color: #fff;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                cursor: pointer;
+            }
+            .drop-down-menu{
+                position: absolute;
+                top: 30px;
+                right: 0;
+                background-color: #fff;
+                width: 250px;
+                padding: 20px 7px;
+                border-radius: 10px;
+                ul{
+                    a{
+                        color: #000;
+                        text-decoration: none;
+                    }
+                    li{
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid $footColor;
+                        padding-bottom: 10px;
+                        cursor: pointer;
+                        img{
+                            margin-right: 10px;
+                            width: 17px;
+                        }
+                    }
+                }
+                &.hide{
+                    display: none;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.phone-nav{
+    display: none;
+    background-color: $DarkYellow;
+    position: fixed;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    left: 0;
+    z-index: 99;
+    ul{
+        display: flex;
+        justify-content: center;
+        gap: 10vw;
+        a{
+            color: $DarkBrown;
+            &:first-child{
+                color: $white;
+            }
+        }
+        .nav-icon{
+            font-size: 30px;
+            cursor: pointer;
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .desktop-nav{
+        display: none;
+    }
+    .phone-nav{
+        display: block;
+    }
+}

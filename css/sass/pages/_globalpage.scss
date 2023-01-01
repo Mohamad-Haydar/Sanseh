@@ -1,0 +1,47 @@
+@use '../helpers/variables' as *;
+:root{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+    @media (max-width: 767px) {
+        margin-bottom: 100px;
+    }
+}
+p{
+    margin-bottom: 0;
+    line-height: 1;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: $black ;
+}
+@for $i from 1 to 6{
+    h#{$i}{
+        margin: 0;
+    }
+}
+
+.white-back{
+    background-color: #fff;
+}
+.back{
+    background-color: $back;
+}
+input[type="checkbox"]{
+    border: 2px solid red;
+}

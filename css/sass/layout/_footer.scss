@@ -1,0 +1,56 @@
+@use '../helpers/variables' as *;
+
+@mixin foot-col-li {
+    padding: 0 30px;
+        ul{
+            li{
+                margin: 20px 0;
+            }
+        }
+}
+@mixin foot-first-last-col {
+    p{
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+    .payment{
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        img{
+            width: 30px;
+        }
+    }
+}
+
+.footer{
+    padding: 50px 20px;
+    @media (max-width:768px) {
+        padding: 50px 20px 100px;
+    }
+    background-color: $LightBrown;
+    .about{
+        @include foot-first-last-col
+    }
+
+    .categories{
+        @include foot-col-li;
+    }
+    .information{
+        @include foot-col-li;
+    }
+
+    .contact{
+        @include foot-first-last-col;
+        p{
+            margin-bottom: 3rem;
+        }
+        img{
+            &:first-child{
+                width: 10px !important;
+            }
+            width: 20px !important;
+        }
+    }
+}

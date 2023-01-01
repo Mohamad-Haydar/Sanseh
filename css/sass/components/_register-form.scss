@@ -1,0 +1,23 @@
+@use '../helpers/variables' as *;
+
+.register{
+    max-width: 1300px;
+    margin: auto;
+    display: block;
+    .main-image{
+        width: 50%;
+        max-width: 600px;
+        @media (max-width: 767px) {
+            margin: 0 auto 3rem;
+            display: block;
+        }
+    }
+    .register-container{
+        display: flex;
+        max-width: 100vw;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}

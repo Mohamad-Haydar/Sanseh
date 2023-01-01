@@ -1,0 +1,74 @@
+@use '../helpers/variables' as *;
+@use '../components/buttons' as *;
+@use '../components/animation' as *;
+@use '../helpers/mixins' as *;
+
+.product-detail{
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .left-part{
+        width: 40%;
+        img{
+            width: 100%;
+        }
+    }
+    .right-part{
+        width: 40%;
+        h3{
+            text-transform: capitalize;
+        }
+        i{
+            &.fa-star{color: $DarkYellow;}
+        }
+        .description{
+            color: $brown;
+            font-weight: 300;
+        }
+        .additional-details{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            select{
+                background-color: #fff;
+                text-align: center;
+                border: 1px solid $border;
+                margin-left: 10px;
+                border-radius: 3px;
+            }
+            input{
+                width: 40px;
+                text-align: center;
+                border: 1px solid $border;
+                border-radius: 3px;
+                &:focus{
+                    outline: none;
+                    border: 1px solid $DarkYellow;
+                }
+            }
+        }
+        .actions{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            gap: 40px;
+            button{
+                text-transform: capitalize;
+                &.add-to-card{
+                    @include empty-yellow-btn;
+                    height: 40px;
+                    border-radius: 10px
+                }
+                &.buy-now{
+                    @include full-yellow-btn;
+                    height: 40px;
+                    border: none;
+                }
+            }
+        }
+    }
+}

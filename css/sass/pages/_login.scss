@@ -1,0 +1,88 @@
+@use '../helpers/variables' as *;
+@use '../components/buttons' as *;
+@use '../components/animation' as *;
+@use '../helpers/mixins' as *;
+
+
+.login{
+    height: calc(100vh);
+    > h2{
+        text-align: center;
+        margin: 30px auto 50px;
+    }
+    .left{
+        width: 50%;
+        img{
+            width: 100%;
+        }
+        @media (max-width: 994px) {
+            display: none !important;
+        }
+    }
+    .right{
+        width: 50%;
+        text-align: center;
+        .error{
+            text-transform: capitalize;
+            color: red;
+            margin-bottom: 0;
+        }
+        @media (max-width: 994px) {
+            margin: auto;
+            display: block;
+        }
+        @media (max-width: 994px) {
+            width: 100%;
+        }
+        button{
+            background-color: $white;
+            text-align: center;
+            width: 49%;
+            border: none;
+            border-bottom: 4px solid #999;
+            padding: 10px;
+            margin-bottom: 50px;
+            &.desired{
+                border-bottom: 4px solid $DarkYellow;
+            }
+            &.submit{
+                @include full-yellow-btn;
+                width: 80%;
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                margin: auto;
+                margin-top: 30px;
+                height: fit-content;
+            }
+        }
+        .sign-up{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .filed{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 300px;
+                margin: 20px auto;
+                border-bottom: 1px solid $LightBrown;
+                input{
+                    padding: 5px;
+                    padding-left: 15px;
+                    width: 100%;
+                    display: block;
+                    margin: auto;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    font-size: 15px;
+                    &:focus{
+                        outline: none;
+                        border: none;
+                    }
+            }
+        }
+    }
+}
+}
